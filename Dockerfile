@@ -7,7 +7,7 @@
 ARG mode=prod
 
 FROM node:23-alpine AS build-stage
-
+RUN mkdir /app && chown node:node /app
 USER node
 WORKDIR /app
 
